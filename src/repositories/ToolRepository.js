@@ -2,15 +2,23 @@ const BaseRepository = require("./BaseRepository")
 const Tool = require("../models/Tools")
 
 
-
+/**
+ * Is class ke bare main likh sakta hoon
+ */
 class ToolRepository extends BaseRepository {
     constructor() {
         super(Tool)
     }
 
+    /**
+     * This method returns Tool by Tool Name
+     * @param {*} name - Tool name
+     * @returns 
+     */
     async findByName(name) {
         return await this.findOne({ name })
     }
+
 
     async findByCategory(category) {
         return await Tool.findByCategory(category);
