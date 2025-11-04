@@ -14,7 +14,7 @@ class BaseRepository {
         if (skip) query = query.skip(skip);
         if (populate) query = query.populate(populate);
 
-        return await query.exce()
+        return await query.exec()
     }
 
 
